@@ -5,9 +5,16 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-applyMiddleware(app);
+const authenticationRoutes = require("./routes/authentication");
+const contestRoutes = require("./routes/Contest");
+const userRoutes = require("./routes/Users");
 
-app.get("/health", (req, res) => {
+applyMiddleware(app);
+app.use(authenticationRoutes);
+app.use(contestRoutes);
+app.use(userRoutes);
+
+app.get("/", (req, res) => {
   res.send("ContestHub is running");
 });
 
