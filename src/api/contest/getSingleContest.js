@@ -1,8 +1,10 @@
 const Contest = require("../../models/contest");
 
-const getAllContest = async (req, res) => {
+const getSingleContest = async (req, res) => {
   try {
-    const result = await Contest.find();
+    const { id } = req.params;
+
+    const result = await Contest.findById(id);
     res.json(result);
   } catch (err) {
     console.error(err);
@@ -10,4 +12,4 @@ const getAllContest = async (req, res) => {
   }
 };
 
-module.exports = getAllContest;
+module.exports = getSingleContest;
