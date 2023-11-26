@@ -1,9 +1,8 @@
 const Contest = require("../../models/contest");
 
-const addContest = async (req, res) => {
+const getAllContest = async (req, res) => {
   try {
-    const contest = req.body;
-    const result = await Contest.create(contest);
+    const result = await Contest.find();
     res.json(result);
   } catch (err) {
     console.error(err);
@@ -11,4 +10,4 @@ const addContest = async (req, res) => {
   }
 };
 
-module.exports = addContest;
+module.exports = getAllContest;

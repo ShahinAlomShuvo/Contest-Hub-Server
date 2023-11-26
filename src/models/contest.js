@@ -41,6 +41,10 @@ const ContestSchema = new Schema({
     type: Number,
     require: true,
   },
+  status: {
+    type: String,
+    require: true,
+  },
 });
 
 const Contest = model("Contest", ContestSchema);
