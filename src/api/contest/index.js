@@ -5,6 +5,9 @@ const getSingleContest = require("./getSingleContest.js");
 const getCreatorContest = require("./getCreatorContest.js");
 const searchContest = require("./searchContest.js");
 const updateContest = require("./updateContest");
+const totalContest = require("./totalContest.js");
+const confirmContest = require("./confirmContest.js");
+const deleteContest = require("./deleteContest.js");
 
 module.exports = {
   addContest,
@@ -14,4 +17,7 @@ module.exports = {
   getCreatorContest,
   searchContest,
   updateContest,
+  totalContest,
+  confirmContest,
+  deleteContest,
 };
