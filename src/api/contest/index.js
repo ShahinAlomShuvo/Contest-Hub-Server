@@ -4,6 +4,7 @@ const popularContest = require("./popularContest.js");
 const getSingleContest = require("./getSingleContest.js");
 const getCreatorContest = require("./getCreatorContest.js");
 const searchContest = require("./searchContest.js");
+const updateContest = require("./updateContest");
 
 module.exports = {
   addContest,
@@ -12,4 +13,5 @@ module.exports = {
   getSingleContest,
   getCreatorContest,
   searchContest,
+  updateContest,
 };
