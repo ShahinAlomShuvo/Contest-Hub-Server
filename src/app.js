@@ -8,11 +8,15 @@ const port = process.env.PORT || 5000;
 const authenticationRoutes = require("./routes/authentication");
 const contestRoutes = require("./routes/Contest");
 const userRoutes = require("./routes/Users");
+const paymentRoute = require("./routes/paymentIntent");
+const registerInfoRoutes = require("./routes/registerInfo/registerInfo");
 
 applyMiddleware(app);
 app.use(authenticationRoutes);
 app.use(contestRoutes);
 app.use(userRoutes);
+app.use(paymentRoute);
+app.use(registerInfoRoutes);
 
 app.get("/", (req, res) => {
   res.send("ContestHub is running");
