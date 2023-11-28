@@ -16,10 +16,7 @@ const RegisterInfoSchema = new Schema({
   contestId: {
     type: String,
     require: true,
-  },
-  contestId: {
-    type: String,
-    require: true,
+    ref: "Contest",
   },
 });
 

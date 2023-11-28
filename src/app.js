@@ -34,10 +34,12 @@ app.use((err, req, res, next) => {
   });
 });
 
-const main = async () => {
+/* const main = async () => {
   await connectDB();
   app.listen(port, () => {
     console.log(`ContestHub is running on port ${port}`);
   });
 };
-main();
+main(); */
+
+module.exports = app;
