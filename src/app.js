@@ -10,6 +10,7 @@ const contestRoutes = require("./routes/Contest");
 const userRoutes = require("./routes/Users");
 const paymentRoute = require("./routes/paymentIntent");
 const registerInfoRoutes = require("./routes/registerInfo/registerInfo");
+const contestSubmissionRoutes = require("./routes/contestSubmission");
 
 applyMiddleware(app);
 app.use(authenticationRoutes);
@@ -17,6 +18,7 @@ app.use(contestRoutes);
 app.use(userRoutes);
 app.use(paymentRoute);
 app.use(registerInfoRoutes);
+app.use(contestSubmissionRoutes);
 
 app.get("/", (req, res) => {
   res.send("ContestHub is running");

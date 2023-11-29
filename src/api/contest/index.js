@@ -8,6 +8,8 @@ const updateContest = require("./updateContest");
 const totalContest = require("./totalContest.js");
 const confirmContest = require("./confirmContest.js");
 const deleteContest = require("./deleteContest.js");
+const setContestWinner = require("./setContestWinner.js");
+const contestCount = require("./contestCount.js");
 
 module.exports = {
   addContest,
@@ -20,4 +22,6 @@ module.exports = {
   totalContest,
   confirmContest,
   deleteContest,
+  setContestWinner,
+  contestCount,
 };

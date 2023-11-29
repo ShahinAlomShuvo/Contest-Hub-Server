@@ -49,6 +49,10 @@ const ContestSchema = new Schema({
     type: String,
     require: true,
   },
+  winnerEmail: {
+    type: String,
+    default: "",
+  },
 });
 
 const Contest = model("Contest", ContestSchema);
