@@ -26,11 +26,11 @@ router.get("/popularContest", popularContest);
 router.get("/creatorContest/:email", verifyToken, getCreatorContest);
 router.get("/searchContest", searchContest);
 router.get("/totalContest", totalContest);
-router.post("/contest", addContest);
-router.patch("/contest/:id", updateContest);
-router.patch("/contest/update/:id", updateSingleContest);
-router.patch("/contest/winner/:id/:email", setContestWinner);
-router.patch("/confirmContest/:id", confirmContest);
-router.delete("/contest/:id", deleteContest);
+router.post("/contest", verifyToken, addContest);
+router.patch("/contest/:id", verifyToken, updateContest);
+router.patch("/contest/update/:id", verifyToken, updateSingleContest);
+router.patch("/contest/winner/:id/:email", verifyToken, setContestWinner);
+router.patch("/confirmContest/:id", verifyToken, confirmContest);
+router.delete("/contest/:id", verifyToken, deleteContest);
 
 module.exports = router;
