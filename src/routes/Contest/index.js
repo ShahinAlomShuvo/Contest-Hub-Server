@@ -12,6 +12,7 @@ const {
   deleteContest,
   setContestWinner,
   contestCount,
+  updateSingleContest,
 } = require("../../api/contest");
 const verifyToken = require("../../middlewares/verifyToken");
 
@@ -27,7 +28,8 @@ router.get("/searchContest", searchContest);
 router.get("/totalContest", totalContest);
 router.post("/contest", addContest);
 router.patch("/contest/:id", updateContest);
-router.patch("/contest/winner/:id", setContestWinner);
+router.patch("/contest/update/:id", updateSingleContest);
+router.patch("/contest/winner/:id/:email", setContestWinner);
 router.patch("/confirmContest/:id", confirmContest);
 router.delete("/contest/:id", deleteContest);
 
