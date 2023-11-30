@@ -3,6 +3,7 @@ const {
   getAllContestSubmission,
   getAllSubmissionOfContest,
   createContestSubmission,
+  singleUserSubmissionInfo,
 } = require("../../api/contestSubmission");
 const verifyToken = require("../../middlewares/verifyToken");
 
@@ -15,5 +16,6 @@ router.get(
   getAllSubmissionOfContest
 );
 router.post("/contest-submitted-task", verifyToken, createContestSubmission);
+router.get("/contest/submission-info/:email", singleUserSubmissionInfo);
 
 module.exports = router;

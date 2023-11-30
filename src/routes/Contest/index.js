@@ -13,6 +13,7 @@ const {
   setContestWinner,
   contestCount,
   updateSingleContest,
+  getWinnerList,
 } = require("../../api/contest");
 const verifyToken = require("../../middlewares/verifyToken");
 
@@ -20,6 +21,8 @@ const router = express.Router();
 
 router.get("/contest", getAllContest);
 router.get("/contest/count", contestCount);
+
+router.get("/contest/winners", getWinnerList);
 
 router.get("/contest/:id", getSingleContest);
 router.get("/popularContest", popularContest);

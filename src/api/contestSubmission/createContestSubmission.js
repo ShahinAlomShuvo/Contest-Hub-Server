@@ -2,10 +2,12 @@ const ContestSubmissionModel = require("../../models/contestSubmission");
 
 const createContestSubmission = async (req, res) => {
   try {
-    const { email, name, submittedTask, contestId, contestName } = req.body;
+    const { email, name, submittedTask, contestId, contestName, image } =
+      req.body;
     const result = await ContestSubmissionModel.create({
       email,
       name,
+      image,
       submittedTask,
       contestId,
       contestName,

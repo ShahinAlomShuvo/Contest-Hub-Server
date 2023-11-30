@@ -11,6 +11,7 @@ const deleteContest = require("./deleteContest.js");
 const setContestWinner = require("./setContestWinner.js");
 const contestCount = require("./contestCount.js");
 const updateSingleContest = require("./updateSingleContes.js");
+const getWinnerList = require("./getWinnerList.js");
 
 module.exports = {
   addContest,
@@ -26,4 +27,5 @@ module.exports = {
   setContestWinner,
   contestCount,
   updateSingleContest,
+  getWinnerList,
 };
