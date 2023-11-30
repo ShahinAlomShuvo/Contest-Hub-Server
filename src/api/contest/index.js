@@ -14,6 +14,7 @@ const updateSingleContest = require("./updateSingleContes.js");
 const getWinnerList = require("./getWinnerList.js");
 const getContestCreatorList = require("./getContestCreatorList.js");
 const getTopWinner = require("./getTopWinner.js");
+const singleUserWinningData = require("./singleUSerWinningData.js");
 
 module.exports = {
   addContest,
@@ -32,4 +33,5 @@ module.exports = {
   getWinnerList,
   getContestCreatorList,
   getTopWinner,
+  singleUserWinningData,
 };

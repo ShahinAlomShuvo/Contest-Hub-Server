@@ -16,6 +16,7 @@ const {
   getWinnerList,
   getTopWinner,
   getContestCreatorList,
+  singleUserWinningData,
 } = require("../../api/contest");
 const verifyToken = require("../../middlewares/verifyToken");
 
@@ -27,6 +28,7 @@ router.get("/contest/count", contestCount);
 router.get("/contest/winners", getWinnerList);
 router.get("/contest/top/winners", getTopWinner);
 router.get("/contest/top/creator", getContestCreatorList);
+router.get("/single-user-winning-data/:email", singleUserWinningData);
 
 router.get("/contest/:id", getSingleContest);
 router.get("/popularContest", popularContest);
