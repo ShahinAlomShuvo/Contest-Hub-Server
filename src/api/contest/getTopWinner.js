@@ -4,6 +4,13 @@ const getTopWinner = async (req, res) => {
   try {
     const result = await Contest.aggregate([
       {
+        $match: {
+          winnerEmail: {
+            $ne: "",
+          },
+        },
+      },
+      {
         $group: {
           _id: "$winnerEmail",
           count: {
